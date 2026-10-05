@@ -3,52 +3,52 @@ import { Question } from '../types';
 export const quizQuestions: Question[] = [
   {
     id: 'q1',
-    question: 'How do you prefer to solve a difficult problem?',
+    question: 'You are leading a team to build a futuristic smart city. What is your primary focus?',
     options: [
-      { text: 'Break it down into logical steps and use data/formulas.', weight: { 'Analytical/Tech': 3, 'Business/Finance': 1 } },
-      { text: 'Look at the human element and how people feel about it.', weight: { 'Creative/Humanities': 3, 'Healthcare/Bio-Sciences': 1 } },
-      { text: 'Analyze the costs, benefits, and long-term value.', weight: { 'Business/Finance': 3 } },
-      { text: 'Understand the biological or physical root cause.', weight: { 'Healthcare/Bio-Sciences': 3, 'Analytical/Tech': 1 } }
+      { text: 'Designing the underlying algorithms and data grids that control traffic and energy.', weight: { 'Analytical/Tech': 4, 'Business/Finance': 1 } },
+      { text: 'Ensuring the city is economically viable, attracting investors, and managing the budget.', weight: { 'Business/Finance': 4, 'Analytical/Tech': 1 } },
+      { text: 'Focusing on the architecture, cultural spaces, and how citizens emotionally connect with the environment.', weight: { 'Creative/Humanities': 4 } },
+      { text: 'Developing the public health infrastructure, green spaces, and sustainable biosystems.', weight: { 'Healthcare/Bio-Sciences': 4, 'Analytical/Tech': 1 } }
     ]
   },
   {
     id: 'q2',
-    question: 'If you had a free weekend, what would you most likely do?',
+    question: 'When faced with a high-stakes, ambiguous problem with no clear right answer, how do you react?',
     options: [
-      { text: 'Code a small project, build a PC, or play strategy games.', weight: { 'Analytical/Tech': 3 } },
-      { text: 'Read about successful companies or manage a small side hustle.', weight: { 'Business/Finance': 3 } },
-      { text: 'Read a novel, write, paint, or debate current events.', weight: { 'Creative/Humanities': 3 } },
-      { text: 'Watch nature documentaries, volunteer, or read about human health.', weight: { 'Healthcare/Bio-Sciences': 3 } }
+      { text: 'I build a framework, test hypotheses using data, and optimize for the most logical outcome.', weight: { 'Analytical/Tech': 4 } },
+      { text: 'I analyze the risks and rewards, looking at historical precedents to maximize value.', weight: { 'Business/Finance': 4, 'Analytical/Tech': 1 } },
+      { text: 'I explore multiple perspectives, write down my thoughts, and look for unconventional narratives.', weight: { 'Creative/Humanities': 4, 'Healthcare/Bio-Sciences': 1 } },
+      { text: 'I observe the human impact, consult experts, and prioritize the well-being of those affected.', weight: { 'Healthcare/Bio-Sciences': 4, 'Creative/Humanities': 2 } }
     ]
   },
   {
     id: 'q3',
-    question: 'Which of these topics sounds most interesting to study for 4 hours?',
+    question: 'Which of the following achievements would make you feel most fulfilled?',
     options: [
-      { text: 'Artificial Intelligence and Space Exploration.', weight: { 'Analytical/Tech': 3 } },
-      { text: 'Stock markets, cryptocurrencies, and global trade.', weight: { 'Business/Finance': 3 } },
-      { text: 'Human history, psychology, or constitutional law.', weight: { 'Creative/Humanities': 3 } },
-      { text: 'Genetics, human anatomy, and neuroscience.', weight: { 'Healthcare/Bio-Sciences': 3 } }
+      { text: 'Inventing a piece of technology that automates a complex, tedious process for millions.', weight: { 'Analytical/Tech': 4 } },
+      { text: 'Scaling a startup into a global enterprise and negotiating a multi-million dollar merger.', weight: { 'Business/Finance': 4 } },
+      { text: 'Publishing a critically acclaimed novel or designing an award-winning brand identity.', weight: { 'Creative/Humanities': 4 } },
+      { text: 'Discovering a cure for a rare disease or directly saving someone\'s life in a crisis.', weight: { 'Healthcare/Bio-Sciences': 4 } }
     ]
   },
   {
     id: 'q4',
-    question: 'When working in a group project, what is usually your role?',
+    question: 'How do you view failure?',
     options: [
-      { text: 'The technical lead or the one who organizes the data/structure.', weight: { 'Analytical/Tech': 2, 'Business/Finance': 1 } },
-      { text: 'The manager who assigns tasks and keeps track of the budget/timeline.', weight: { 'Business/Finance': 3 } },
-      { text: 'The creative lead who writes the content or designs the presentation.', weight: { 'Creative/Humanities': 3 } },
-      { text: 'The empathetic mediator who ensures everyone is doing okay.', weight: { 'Healthcare/Bio-Sciences': 2, 'Creative/Humanities': 1 } }
+      { text: 'As a bug in the system. I debug, refactor my approach, and run the test again.', weight: { 'Analytical/Tech': 3, 'Business/Finance': 1 } },
+      { text: 'As a sunk cost. I cut my losses, pivot my strategy, and look for the next profitable opportunity.', weight: { 'Business/Finance': 4 } },
+      { text: 'As a part of the human experience. It fuels my creativity and deepens my understanding of the world.', weight: { 'Creative/Humanities': 4 } },
+      { text: 'As a diagnostic learning moment. I analyze the symptoms of the failure to prevent future harm.', weight: { 'Healthcare/Bio-Sciences': 3, 'Analytical/Tech': 1 } }
     ]
   },
   {
     id: 'q5',
-    question: 'How comfortable are you with advanced mathematics (Calculus, Algebra)?',
+    question: 'If you had to read a 500-page book this week, which topic would keep you awake at night?',
     options: [
-      { text: 'I love it. Give me more complex equations!', weight: { 'Analytical/Tech': 3, 'Business/Finance': 1 } },
-      { text: 'I am okay with practical math for finance, but not abstract calculus.', weight: { 'Business/Finance': 2, 'Creative/Humanities': 1 } },
-      { text: 'I can do basic math, but I prefer reading and writing.', weight: { 'Creative/Humanities': 3, 'Healthcare/Bio-Sciences': 1 } },
-      { text: 'I prefer studying living things over numbers.', weight: { 'Healthcare/Bio-Sciences': 2, 'Creative/Humanities': 1 } }
+      { text: 'The mathematics of quantum computing and the future of artificial intelligence.', weight: { 'Analytical/Tech': 4 } },
+      { text: 'The behavioral economics behind the 2008 financial crash and market psychology.', weight: { 'Business/Finance': 4 } },
+      { text: 'A philosophical analysis of human rights and the evolution of modern art.', weight: { 'Creative/Humanities': 4 } },
+      { text: 'The intricate mapping of the human genome and evolutionary biology.', weight: { 'Healthcare/Bio-Sciences': 4 } }
     ]
   }
 ];

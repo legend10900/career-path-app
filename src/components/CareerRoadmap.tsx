@@ -80,75 +80,106 @@ export default function CareerRoadmap() {
                   exit={{ height: 0, opacity: 0 }}
                   className="overflow-hidden"
                 >
-                  <div className="p-5 sm:p-6 border-t border-slate-100 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-800/20">
-                    <div className="grid md:grid-cols-4 gap-6 relative">
+                    <div className="p-5 sm:p-6 border-t border-slate-100 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-800/20">
                       
-                      {/* Step 1 */}
-                      <div className="relative">
-                        <div className="flex items-center gap-2 mb-3 text-indigo-600 dark:text-indigo-400 font-semibold">
-                          <Map className="w-5 h-5" />
-                          <h4>1. High School Stream</h4>
+                      {career.dayInTheLife && (
+                        <div className="mb-6 p-4 bg-indigo-50 dark:bg-indigo-900/20 border border-indigo-100 dark:border-indigo-800 rounded-xl">
+                          <h4 className="text-indigo-800 dark:text-indigo-300 font-semibold mb-2">A Day in the Life</h4>
+                          <p className="text-sm text-indigo-700/80 dark:text-indigo-200/80 leading-relaxed">{career.dayInTheLife}</p>
                         </div>
-                        <ul className="space-y-2">
-                          {career.recommendedStreams.map(s => (
-                            <li key={s} className="flex items-start text-sm text-slate-700 dark:text-slate-300">
-                              <CheckCircle2 className="w-4 h-4 text-emerald-500 mr-2 mt-0.5 shrink-0" />
-                              {s}
-                            </li>
-                          ))}
-                        </ul>
+                      )}
+
+                      <div className="grid md:grid-cols-4 gap-6 relative">
+                        
+                        {/* Step 1 */}
+                        <div className="relative">
+                          <div className="flex items-center gap-2 mb-3 text-indigo-600 dark:text-indigo-400 font-semibold">
+                            <Map className="w-5 h-5" />
+                            <h4>1. High School Stream</h4>
+                          </div>
+                          <ul className="space-y-2">
+                            {career.recommendedStreams.map(s => (
+                              <li key={s} className="flex items-start text-sm text-slate-700 dark:text-slate-300">
+                                <CheckCircle2 className="w-4 h-4 text-emerald-500 mr-2 mt-0.5 shrink-0" />
+                                {s}
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+
+                        {/* Step 2 */}
+                        <div className="relative">
+                          <div className="flex items-center gap-2 mb-3 text-purple-600 dark:text-purple-400 font-semibold">
+                            <GraduationCap className="w-5 h-5" />
+                            <h4>2. College & Exams</h4>
+                          </div>
+                          <ul className="space-y-2">
+                            {career.entranceExams.map(e => (
+                              <li key={e} className="flex items-start text-sm text-slate-700 dark:text-slate-300">
+                                <span className="w-1.5 h-1.5 bg-purple-500 rounded-full mr-2 mt-1.5 shrink-0" />
+                                {e}
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+
+                        {/* Step 3 */}
+                        <div className="relative">
+                          <div className="flex items-center gap-2 mb-3 text-rose-600 dark:text-rose-400 font-semibold">
+                            <Briefcase className="w-5 h-5" />
+                            <h4>3. Core Skills to Build</h4>
+                          </div>
+                          <div className="flex flex-wrap gap-2">
+                            {career.coreSkills.map(skill => (
+                              <span key={skill} className="px-2 py-1 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded text-xs text-slate-600 dark:text-slate-300 shadow-sm">
+                                {skill}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
+
+                        {/* Step 4 */}
+                        <div className="relative">
+                          <div className="flex items-center gap-2 mb-3 text-emerald-600 dark:text-emerald-400 font-semibold">
+                            <TrendingUp className="w-5 h-5" />
+                            <h4>4. First Jobs & Salary</h4>
+                          </div>
+                          <p className="text-sm font-medium text-slate-800 dark:text-slate-200 mb-2">{career.salaryRange}</p>
+                          <p className="text-xs text-slate-500 mb-2">Growth Trend: {career.growthTrend}</p>
+                          <div className="flex flex-wrap gap-2">
+                            {career.firstJobRoles.map(role => (
+                              <span key={role} className="px-2 py-1 bg-emerald-50 dark:bg-emerald-900/20 text-emerald-700 dark:text-emerald-300 rounded text-xs font-medium border border-emerald-100 dark:border-emerald-800">
+                                {role}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
                       </div>
 
-                      {/* Step 2 */}
-                      <div className="relative">
-                        <div className="flex items-center gap-2 mb-3 text-purple-600 dark:text-purple-400 font-semibold">
-                          <GraduationCap className="w-5 h-5" />
-                          <h4>2. College & Exams</h4>
+                      {/* International Path */}
+                      {career.internationalPath && (
+                        <div className="mt-8 pt-6 border-t border-slate-200 dark:border-slate-700">
+                          <h4 className="text-sm font-bold text-slate-800 dark:text-white mb-4 uppercase tracking-wider">🌍 International Pathway</h4>
+                          <div className="grid md:grid-cols-3 gap-6">
+                            <div className="md:col-span-2">
+                              <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">{career.internationalPath.description}</p>
+                            </div>
+                            <div>
+                              <div className="mb-4">
+                                <span className="block text-xs text-slate-500 mb-1">Required Exams</span>
+                                <div className="flex flex-wrap gap-1">
+                                  {career.internationalPath.exams.map(e => <span key={e} className="px-2 py-0.5 bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300 text-[11px] rounded">{e}</span>)}
+                                </div>
+                              </div>
+                              <div>
+                                <span className="block text-xs text-slate-500 mb-1">Top Destinations</span>
+                                <p className="text-sm font-medium text-slate-700 dark:text-slate-300">{career.internationalPath.topDestinations.join(', ')}</p>
+                              </div>
+                            </div>
+                          </div>
                         </div>
-                        <ul className="space-y-2">
-                          {career.entranceExams.map(e => (
-                            <li key={e} className="flex items-start text-sm text-slate-700 dark:text-slate-300">
-                              <span className="w-1.5 h-1.5 bg-purple-500 rounded-full mr-2 mt-1.5 shrink-0" />
-                              {e}
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-
-                      {/* Step 3 */}
-                      <div className="relative">
-                        <div className="flex items-center gap-2 mb-3 text-rose-600 dark:text-rose-400 font-semibold">
-                          <Briefcase className="w-5 h-5" />
-                          <h4>3. Core Skills to Build</h4>
-                        </div>
-                        <div className="flex flex-wrap gap-2">
-                          {career.coreSkills.map(skill => (
-                            <span key={skill} className="px-2 py-1 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded text-xs text-slate-600 dark:text-slate-300">
-                              {skill}
-                            </span>
-                          ))}
-                        </div>
-                      </div>
-
-                      {/* Step 4 */}
-                      <div className="relative">
-                        <div className="flex items-center gap-2 mb-3 text-emerald-600 dark:text-emerald-400 font-semibold">
-                          <TrendingUp className="w-5 h-5" />
-                          <h4>4. First Jobs & Salary</h4>
-                        </div>
-                        <p className="text-sm font-medium text-slate-800 dark:text-slate-200 mb-2">{career.salaryRange}</p>
-                        <p className="text-xs text-slate-500 mb-2">Growth Trend: {career.growthTrend}</p>
-                        <div className="flex flex-wrap gap-2">
-                          {career.firstJobRoles.map(role => (
-                            <span key={role} className="px-2 py-1 bg-emerald-50 dark:bg-emerald-900/20 text-emerald-700 dark:text-emerald-300 rounded text-xs">
-                              {role}
-                            </span>
-                          ))}
-                        </div>
-                      </div>
-
+                      )}
                     </div>
-                  </div>
                 </motion.div>
               )}
             </AnimatePresence>

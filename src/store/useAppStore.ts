@@ -5,8 +5,10 @@ import { QuizResult, StreamCategory } from '../types';
 interface AppState {
   quizResult: QuizResult | null;
   savedCareers: string[];
+  isAssistantOpen: boolean;
   setQuizResult: (result: QuizResult) => void;
   toggleSavedCareer: (careerId: string) => void;
+  toggleAssistant: () => void;
   reset: () => void;
 }
 
@@ -15,6 +17,7 @@ export const useAppStore = create<AppState>()(
     (set) => ({
       quizResult: null,
       savedCareers: [],
+      isAssistantOpen: false,
       setQuizResult: (result) => set({ quizResult: result }),
       toggleSavedCareer: (careerId) =>
         set((state) => ({
@@ -22,6 +25,7 @@ export const useAppStore = create<AppState>()(
             ? state.savedCareers.filter((id) => id !== careerId)
             : [...state.savedCareers, careerId],
         })),
+      toggleAssistant: () => set((state) => ({ isAssistantOpen: !state.isAssistantOpen })),
       reset: () => set({ quizResult: null, savedCareers: [] }),
     }),
     {

@@ -1,9 +1,13 @@
+'use client';
+
 import React from 'react';
 import LandingHero from '@/components/LandingHero';
 import MythsGrid from '@/components/MythsGrid';
 import StreamsGrid from '@/components/StreamsGrid';
 import QuizEngine from '@/components/QuizEngine';
 import CareerRoadmap from '@/components/CareerRoadmap';
+import AICounselorModal from '@/components/AICounselorModal';
+import { useAppStore } from '@/store/useAppStore';
 import { MessageSquare } from 'lucide-react';
 
 export default function Home() {
@@ -33,12 +37,23 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Floating AI Counselor Widget Mockup */}
+      {/* Floating AI Counselor Widget */}
+      <AICounselorModal />
       <div className="fixed bottom-6 right-6 z-50">
-        <button className="flex items-center justify-center w-14 h-14 bg-indigo-600 hover:bg-indigo-500 text-white rounded-full shadow-lg shadow-indigo-500/30 transition-transform hover:scale-105">
-          <MessageSquare className="w-6 h-6" />
-        </button>
+        <FloatingButton />
       </div>
     </main>
+  );
+}
+
+function FloatingButton() {
+  const { toggleAssistant } = useAppStore();
+  return (
+    <button 
+      onClick={toggleAssistant}
+      className="flex items-center justify-center w-14 h-14 bg-gradient-to-r from-indigo-600 to-emerald-500 hover:from-indigo-500 hover:to-emerald-400 text-white rounded-full shadow-xl shadow-indigo-500/30 transition-transform hover:scale-110 active:scale-95"
+    >
+      <MessageSquare className="w-6 h-6" />
+    </button>
   );
 }

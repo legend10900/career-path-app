@@ -12,6 +12,12 @@ export interface Stream {
   icon: string; // name of lucide icon
 }
 
+export interface InternationalPath {
+  description: string;
+  exams: string[];
+  topDestinations: string[];
+}
+
 export interface Career {
   id: string;
   title: string;
@@ -24,6 +30,8 @@ export interface Career {
   firstJobRoles: string[];
   salaryRange: string;
   growthTrend: 'High' | 'Medium' | 'Steady';
+  internationalPath?: InternationalPath;
+  dayInTheLife?: string;
 }
 
 export type Archetype = 'Analytical/Tech' | 'Business/Finance' | 'Creative/Humanities' | 'Healthcare/Bio-Sciences';
