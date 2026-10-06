@@ -15,7 +15,7 @@ export default function AICounselorModal() {
       { 
         id: '1',
         role: 'assistant', 
-        content: "Hi! I'm your AI Career Counselor powered by Grok. Whether you're confused about taking Math in 11th grade, wondering how to study abroad, or want me to analyze your hobbies, ask me anything!"
+        content: "Hi! I'm your AI Career Counselor powered by Groq & Llama 3. Whether you're confused about taking Math in 11th grade, wondering how to study abroad, or want me to analyze your hobbies, ask me anything!"
       }
     ]
   });
@@ -85,7 +85,7 @@ export default function AICounselorModal() {
                   <Bot className="w-4 h-4 text-red-600 dark:text-red-400" />
                 </div>
                 <div className="p-3 rounded-2xl max-w-[85%] text-sm whitespace-pre-wrap leading-relaxed bg-red-50 dark:bg-red-900/10 border border-red-200 dark:border-red-800/30 text-red-600 dark:text-red-400 rounded-tl-none">
-                  API Error: {error.message}. If using Grok, you might need to add billing credits at console.x.ai.
+                  API Error: {error.message}. Please ensure your GROQ_API_KEY is set correctly.
                 </div>
               </div>
             )}
