@@ -9,7 +9,7 @@ import { useChat } from 'ai/react';
 export default function AICounselorModal() {
   const { isAssistantOpen, toggleAssistant, pendingCustomInterest, clearPendingInterest } = useAppStore();
   
-  const { messages, input, handleInputChange, handleSubmit, setMessages, append } = useChat({
+  const { messages, input, handleInputChange, handleSubmit, setMessages, append, error } = useChat({
     api: '/api/chat',
     initialMessages: [
       { 
@@ -79,6 +79,16 @@ export default function AICounselorModal() {
                 </div>
               </div>
             ))}
+            {error && (
+              <div className="flex gap-2 justify-start">
+                <div className="w-8 h-8 rounded-full bg-red-100 dark:bg-red-900/50 flex items-center justify-center shrink-0">
+                  <Bot className="w-4 h-4 text-red-600 dark:text-red-400" />
+                </div>
+                <div className="p-3 rounded-2xl max-w-[85%] text-sm whitespace-pre-wrap leading-relaxed bg-red-50 dark:bg-red-900/10 border border-red-200 dark:border-red-800/30 text-red-600 dark:text-red-400 rounded-tl-none">
+                  API Error: {error.message}. If using Grok, you might need to add billing credits at console.x.ai.
+                </div>
+              </div>
+            )}
           </div>
 
           {/* Input */}

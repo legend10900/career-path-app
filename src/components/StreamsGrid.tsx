@@ -14,12 +14,19 @@ const iconMap: Record<string, React.ElementType> = {
 };
 
 export default function StreamsGrid() {
+  const handleStreamClick = (streamName: string) => {
+    document.getElementById('roadmaps')?.scrollIntoView({ behavior: 'smooth' });
+    setTimeout(() => {
+      window.dispatchEvent(new CustomEvent('setSearchTerm', { detail: streamName }));
+    }, 500);
+  };
+
   return (
     <section className="py-20 bg-white dark:bg-slate-950">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-4">Explore High School Streams</h2>
-          <p className="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">Click to see what each path really involves.</p>
+          <p className="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">Click to explore career roadmaps for each path.</p>
         </div>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -28,6 +35,7 @@ export default function StreamsGrid() {
             return (
               <motion.div 
                 key={stream.id}
+                onClick={() => handleStreamClick(stream.name)}
                 initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}

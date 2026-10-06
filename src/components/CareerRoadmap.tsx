@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { careers } from '@/data/careers';
 import { Career } from '@/types';
@@ -10,6 +10,17 @@ export default function CareerRoadmap() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedIndustry, setSelectedIndustry] = useState<string>('All');
   const [expandedId, setExpandedId] = useState<string | null>(null);
+
+  useEffect(() => {
+    const handleSetSearch = (e: Event) => {
+      const customEvent = e as CustomEvent;
+      if (customEvent.detail) {
+        setSearchTerm(customEvent.detail);
+      }
+    };
+    window.addEventListener('setSearchTerm', handleSetSearch);
+    return () => window.removeEventListener('setSearchTerm', handleSetSearch);
+  }, []);
 
   const industries = ['All', ...Array.from(new Set(careers.map(c => c.industry)))];
 
