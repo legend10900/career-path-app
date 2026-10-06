@@ -15,7 +15,6 @@ export default function AICounselorModal() {
       { 
         id: '1',
         role: 'assistant', 
-        text: "Hi! I'm your AI Career Counselor powered by Grok. Whether you're confused about taking Math in 11th grade, wondering how to study abroad, or want me to analyze your hobbies, ask me anything!",
         content: "Hi! I'm your AI Career Counselor powered by Grok. Whether you're confused about taking Math in 11th grade, wondering how to study abroad, or want me to analyze your hobbies, ask me anything!"
       }
     ]
@@ -34,6 +33,7 @@ export default function AICounselorModal() {
   useEffect(() => {
     if (isAssistantOpen && pendingCustomInterest) {
       append({
+        id: Date.now().toString(),
         role: 'user',
         content: `Here are my interests: ${pendingCustomInterest}. Can you analyze this and suggest some career paths or high school streams?`
       });

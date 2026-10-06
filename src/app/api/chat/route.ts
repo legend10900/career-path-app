@@ -14,7 +14,7 @@ export async function POST(req: Request) {
   try {
     const { messages } = await req.json();
 
-    const result = streamText({
+    const result = await streamText({
       model: grok('grok-beta'), // Using grok-beta or grok-2 depending on what's available
       system: `You are an expert high school career counselor for a platform called 'Career Path'. 
 Your goal is to help teenagers figure out their ideal high school streams (Science PCM/PCB, Commerce, Humanities) and long-term career goals based on their interests, hobbies, and aversions.

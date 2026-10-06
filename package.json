@@ -9,9 +9,10 @@
     "lint": "eslint"
   },
   "dependencies": {
-    "@ai-sdk/openai": "^4.0.84",
+    "@ai-sdk/openai": "^0.0.44",
+    "@ai-sdk/react": "^4.0.131",
     "@supabase/supabase-js": "^2.117.2",
-    "ai": "^7.0.128",
+    "ai": "^3.3.0",
     "clsx": "^2.1.1",
     "framer-motion": "^14.0.0",
     "lucide-react": "^1.52.0",
