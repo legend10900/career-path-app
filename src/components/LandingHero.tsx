@@ -10,11 +10,9 @@ export default function LandingHero() {
   };
 
   return (
-    <section className="relative w-full overflow-hidden bg-slate-950 text-white py-24 sm:py-32">
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-[40%] -left-[20%] w-[70%] h-[70%] rounded-full bg-indigo-500/20 blur-[120px]" />
-        <div className="absolute top-[60%] -right-[20%] w-[60%] h-[60%] rounded-full bg-emerald-500/20 blur-[120px]" />
-      </div>
+    <section className="relative w-full bg-slate-900 border-b border-slate-800 text-white py-24 sm:py-32 overflow-hidden">
+      {/* Subtle Grid Background */}
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
       
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <motion.div
@@ -22,29 +20,29 @@ export default function LandingHero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-indigo-300 text-sm font-medium mb-6 border border-white/10">
+          <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 text-blue-400 text-sm font-medium mb-6 border border-blue-500/20 tracking-wide uppercase">
             <Sparkles className="w-4 h-4" />
-            Discover Your True Potential
+            Empowering Your Future
           </span>
-          <h1 className="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight mb-8">
+          <h1 className="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight mb-8 text-white">
             Choose Your High School Stream <br className="hidden sm:block" />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-emerald-400">Without the Stress.</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400">With Absolute Clarity.</span>
           </h1>
-          <p className="max-w-2xl mx-auto text-lg sm:text-xl text-slate-300 mb-10 leading-relaxed">
-            Stop guessing about your future. Take our 3-minute quiz to find the perfect stream and explore real-world career roadmaps built for teens.
+          <p className="max-w-2xl mx-auto text-lg sm:text-xl text-slate-400 mb-10 leading-relaxed font-light">
+            Stop guessing about your future. Utilize our intelligent assessment hub and intense career roadmaps to make data-driven decisions for your education.
           </p>
           
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <button 
               onClick={() => scrollToSection('quiz')}
-              className="px-8 py-4 bg-indigo-600 hover:bg-indigo-500 text-white rounded-full font-semibold transition-all flex items-center justify-center group"
+              className="px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white rounded-lg font-semibold transition-all flex items-center justify-center group shadow-lg shadow-blue-500/20"
             >
-              Take the 3-Minute Quiz
+              Start Assessment
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </button>
             <button 
               onClick={() => scrollToSection('roadmaps')}
-              className="px-8 py-4 bg-white/10 hover:bg-white/20 text-white rounded-full font-semibold transition-all flex items-center justify-center backdrop-blur-sm border border-white/10"
+              className="px-8 py-4 bg-slate-800 hover:bg-slate-700 text-slate-300 rounded-lg font-semibold transition-all flex items-center justify-center border border-slate-700"
             >
               <BookOpen className="w-5 h-5 mr-2" />
               Explore Roadmaps

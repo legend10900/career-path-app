@@ -4,7 +4,7 @@ import React from 'react';
 import LandingHero from '@/components/LandingHero';
 import MythsGrid from '@/components/MythsGrid';
 import StreamsGrid from '@/components/StreamsGrid';
-import QuizEngine from '@/components/QuizEngine';
+import AssessmentHub from '@/components/AssessmentHub';
 import CareerRoadmap from '@/components/CareerRoadmap';
 import AICounselorModal from '@/components/AICounselorModal';
 import { useAppStore } from '@/store/useAppStore';
@@ -15,15 +15,17 @@ export default function Home() {
     <main className="min-h-screen bg-slate-50 dark:bg-slate-950 font-sans">
       <LandingHero />
       <MythsGrid />
-      <StreamsGrid />
+      <div id="streams-section">
+        <StreamsGrid />
+      </div>
       
-      <section id="quiz" className="py-24 bg-indigo-50 dark:bg-slate-900">
+      <section id="quiz" className="py-24 bg-slate-100 dark:bg-slate-900 border-y border-slate-200 dark:border-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-4">The Stream & Career Fit Quiz</h2>
-            <p className="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">Answer a few quick questions to find your natural archetype and recommended paths.</p>
+            <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-4">Where are you on your journey?</h2>
+            <p className="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">Choose an option below to find your personalized path.</p>
           </div>
-          <QuizEngine />
+          <AssessmentHub />
         </div>
       </section>
 

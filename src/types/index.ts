@@ -26,6 +26,8 @@ export interface Career {
   isTech: boolean;
   recommendedStreams: StreamCategory[];
   entranceExams: string[];
+  targetScores?: string[];
+  certificationsToGet?: string[];
   coreSkills: string[];
   firstJobRoles: string[];
   salaryRange: string;

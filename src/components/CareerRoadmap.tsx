@@ -26,6 +26,7 @@ export default function CareerRoadmap() {
         <div className="relative flex-1">
           <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 w-5 h-5" />
           <input 
+            id="career-search"
             type="text" 
             placeholder="Search careers (e.g. Software, Doctor)..."
             value={searchTerm}
@@ -113,14 +114,32 @@ export default function CareerRoadmap() {
                             <GraduationCap className="w-5 h-5" />
                             <h4>2. College & Exams</h4>
                           </div>
-                          <ul className="space-y-2">
-                            {career.entranceExams.map(e => (
-                              <li key={e} className="flex items-start text-sm text-slate-700 dark:text-slate-300">
-                                <span className="w-1.5 h-1.5 bg-purple-500 rounded-full mr-2 mt-1.5 shrink-0" />
-                                {e}
-                              </li>
-                            ))}
-                          </ul>
+                          <div className="space-y-4">
+                            <div>
+                              <span className="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-1 block">Entrance Exams</span>
+                              <ul className="space-y-1.5">
+                                {career.entranceExams.map(e => (
+                                  <li key={e} className="flex items-start text-sm text-slate-700 dark:text-slate-300">
+                                    <span className="w-1.5 h-1.5 bg-purple-500 rounded-full mr-2 mt-1.5 shrink-0" />
+                                    {e}
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                            {career.targetScores && career.targetScores.length > 0 && (
+                              <div className="bg-purple-50 dark:bg-purple-900/10 p-3 rounded-lg border border-purple-100 dark:border-purple-800/30">
+                                <span className="text-xs font-semibold text-purple-700 dark:text-purple-400 uppercase tracking-wider mb-1 block">Target Scores</span>
+                                <ul className="space-y-1">
+                                  {career.targetScores.map(score => (
+                                    <li key={score} className="text-xs text-purple-800 dark:text-purple-300 flex items-center">
+                                      <span className="w-1 h-1 bg-purple-400 rounded-full mr-1.5" />
+                                      {score}
+                                    </li>
+                                  ))}
+                                </ul>
+                              </div>
+                            )}
+                          </div>
                         </div>
 
                         {/* Step 3 */}
@@ -129,12 +148,27 @@ export default function CareerRoadmap() {
                             <Briefcase className="w-5 h-5" />
                             <h4>3. Core Skills to Build</h4>
                           </div>
-                          <div className="flex flex-wrap gap-2">
-                            {career.coreSkills.map(skill => (
-                              <span key={skill} className="px-2 py-1 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded text-xs text-slate-600 dark:text-slate-300 shadow-sm">
-                                {skill}
-                              </span>
-                            ))}
+                          <div className="space-y-4">
+                            <div className="flex flex-wrap gap-2">
+                              {career.coreSkills.map(skill => (
+                                <span key={skill} className="px-2 py-1 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded text-xs text-slate-600 dark:text-slate-300 shadow-sm">
+                                  {skill}
+                                </span>
+                              ))}
+                            </div>
+                            {career.certificationsToGet && career.certificationsToGet.length > 0 && (
+                              <div className="bg-rose-50 dark:bg-rose-900/10 p-3 rounded-lg border border-rose-100 dark:border-rose-800/30">
+                                <span className="text-xs font-semibold text-rose-700 dark:text-rose-400 uppercase tracking-wider mb-2 block">Recommended Certifications</span>
+                                <ul className="space-y-1.5">
+                                  {career.certificationsToGet.map(cert => (
+                                    <li key={cert} className="text-xs text-rose-800 dark:text-rose-300 flex items-start">
+                                      <CheckCircle2 className="w-3.5 h-3.5 text-rose-500 mr-1.5 shrink-0" />
+                                      {cert}
+                                    </li>
+                                  ))}
+                                </ul>
+                              </div>
+                            )}
                           </div>
                         </div>
 
