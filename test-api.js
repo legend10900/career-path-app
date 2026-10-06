@@ -1,18 +1,19 @@
 const { createOpenAI } = require('@ai-sdk/openai');
 const { generateText } = require('ai');
+require('dotenv').config({ path: '.env.local' });
 
-const grok = createOpenAI({
-  apiKey: process.env.GROK_API_KEY,
-  baseURL: 'https://api.x.ai/v1',
+const groq = createOpenAI({
+  apiKey: process.env.GROQ_API_KEY,
+  baseURL: 'https://api.groq.com/openai/v1',
 });
 
 async function main() {
   try {
     const result = await generateText({
-      model: grok('grok-beta'),
-      prompt: 'Hello',
+      model: groq('openai/gpt-oss-120b'),
+      prompt: 'Hello! Please reply with exactly one word: Success',
     });
-    console.log("Success:", result.text);
+    console.log("Response:", result.text);
   } catch (err) {
     console.error("Error:", err);
   }

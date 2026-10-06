@@ -15,7 +15,7 @@ export async function POST(req: Request) {
     const { messages } = await req.json();
 
     const result = await streamText({
-      model: groq('llama3-70b-8192'), // Using Meta's Llama 3 70B model via Groq for insanely fast speeds
+      model: groq('openai/gpt-oss-120b'), // Using Groq's fast open-source 120b model
       system: `You are an expert high school career counselor for a platform called 'Career Path'. 
 Your goal is to help teenagers figure out their ideal high school streams (Science PCM/PCB, Commerce, Humanities) and long-term career goals based on their interests, hobbies, and aversions.
 Be highly encouraging, use a friendly yet professional tone. Keep responses relatively concise and highly actionable.
