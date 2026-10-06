@@ -52,7 +52,7 @@ function FloatingButton() {
   const { toggleAssistant } = useAppStore();
   return (
     <button 
-      onClick={toggleAssistant}
+      onClick={() => toggleAssistant()}
       className="flex items-center justify-center w-14 h-14 bg-gradient-to-r from-indigo-600 to-emerald-500 hover:from-indigo-500 hover:to-emerald-400 text-white rounded-full shadow-xl shadow-indigo-500/30 transition-transform hover:scale-110 active:scale-95"
     >
       <MessageSquare className="w-6 h-6" />
