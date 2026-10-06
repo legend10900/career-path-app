@@ -6,9 +6,11 @@ interface AppState {
   quizResult: QuizResult | null;
   savedCareers: string[];
   isAssistantOpen: boolean;
+  pendingCustomInterest: string | null;
   setQuizResult: (result: QuizResult) => void;
   toggleSavedCareer: (careerId: string) => void;
-  toggleAssistant: () => void;
+  toggleAssistant: (initialInterest?: string) => void;
+  clearPendingInterest: () => void;
   reset: () => void;
 }
 
@@ -18,6 +20,7 @@ export const useAppStore = create<AppState>()(
       quizResult: null,
       savedCareers: [],
       isAssistantOpen: false,
+      pendingCustomInterest: null,
       setQuizResult: (result) => set({ quizResult: result }),
       toggleSavedCareer: (careerId) =>
         set((state) => ({
@@ -25,7 +28,11 @@ export const useAppStore = create<AppState>()(
             ? state.savedCareers.filter((id) => id !== careerId)
             : [...state.savedCareers, careerId],
         })),
-      toggleAssistant: () => set((state) => ({ isAssistantOpen: !state.isAssistantOpen })),
+      toggleAssistant: (initialInterest?: string) => set((state) => ({ 
+        isAssistantOpen: !state.isAssistantOpen,
+        pendingCustomInterest: initialInterest || null
+      })),
+      clearPendingInterest: () => set({ pendingCustomInterest: null }),
       reset: () => set({ quizResult: null, savedCareers: [] }),
     }),
     {

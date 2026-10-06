@@ -16,9 +16,9 @@ export default function AssessmentHub() {
   const handleCustomSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!customInterest.trim()) return;
-    // Open the AI counselor and we can imagine passing this interest to it
-    // In a real app we'd dispatch this to the AI's initial message
-    toggleAssistant();
+    
+    toggleAssistant(customInterest);
+    setCustomInterest('');
   };
 
   const scrollToRoadmaps = () => {
