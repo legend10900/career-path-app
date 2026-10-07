@@ -25,8 +25,10 @@ export default function CareerRoadmap() {
   const industries = ['All', ...Array.from(new Set(careers.map(c => c.industry)))];
 
   const filteredCareers = careers.filter(c => {
-    const matchesSearch = c.title.toLowerCase().includes(searchTerm.toLowerCase()) || 
-                          c.description.toLowerCase().includes(searchTerm.toLowerCase());
+    const searchLower = searchTerm.toLowerCase();
+    const matchesSearch = c.title.toLowerCase().includes(searchLower) || 
+                          c.description.toLowerCase().includes(searchLower) ||
+                          c.recommendedStreams.some(s => s.toLowerCase().includes(searchLower));
     const matchesIndustry = selectedIndustry === 'All' || c.industry === selectedIndustry;
     return matchesSearch && matchesIndustry;
   });
