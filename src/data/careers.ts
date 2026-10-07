@@ -231,5 +231,131 @@ export const careers: Career[] = [
       exams: ['GRE', 'Portfolio Review'],
       topDestinations: ['Italy', 'UK', 'USA', 'Singapore']
     }
+  },
+  {
+    id: 'c-entrepreneur',
+    title: 'Startup Founder / Entrepreneur',
+    description: 'Build innovative companies from scratch, secure venture capital funding, and solve real-world problems at scale.',
+    industry: 'Business & Tech',
+    isTech: false,
+    recommendedStreams: ['Commerce with Math', 'Science PCM', 'Humanities/Arts'],
+    entranceExams: ['None strictly required (Top MBAs/B-Schools help)'],
+    targetScores: ['N/A'],
+    certificationsToGet: ['Y Combinator Startup School (Free)', 'Product Management Certifications'],
+    coreSkills: ['Leadership', 'Sales & Pitching', 'Product Strategy', 'Financial Modeling'],
+    firstJobRoles: ['Founder', 'Early-stage Startup Employee', 'Product Manager'],
+    salaryRange: 'Highly Variable (Equity-based)',
+    growthTrend: 'High',
+    dayInTheLife: 'Pitching to investors, recruiting top talent, reviewing product metrics, and constantly adapting business models.',
+    internationalPath: {
+      description: 'Many founders expand their startups globally or move to major tech hubs for better VC access.',
+      exams: ['Startup Visa requirements vary by country'],
+      topDestinations: ['USA (Silicon Valley)', 'Singapore', 'UK', 'UAE']
+    }
+  },
+  {
+    id: 'c-quant-finance',
+    title: 'Quant & Fintech Analyst',
+    description: 'Merge advanced mathematics, computer science, and finance to build algorithmic trading models and financial tech solutions.',
+    industry: 'Finance / Technology',
+    isTech: true,
+    recommendedStreams: ['Science PCM', 'Commerce with Math'],
+    entranceExams: ['JEE Advanced', 'ISI Entrance', 'CAT'],
+    targetScores: ['Top Math/Engineering College Ranks'],
+    certificationsToGet: ['CQF (Certificate in Quantitative Finance)', 'Python for Finance'],
+    coreSkills: ['Probability & Statistics', 'C++/Python', 'Algorithmic Trading', 'Financial Engineering'],
+    firstJobRoles: ['Quantitative Analyst', 'Risk Analyst', 'Fintech Data Scientist'],
+    salaryRange: '₹20L - ₹50L+ / year (India)',
+    growthTrend: 'High',
+    dayInTheLife: 'Writing high-frequency trading algorithms, analyzing massive financial datasets, and optimizing risk models.',
+    internationalPath: {
+      description: 'Extremely lucrative globally. Master of Financial Engineering (MFE) is a common global pathway.',
+      exams: ['GRE (Perfect Quant Score)', 'TOEFL'],
+      topDestinations: ['USA (New York/Chicago)', 'UK (London)', 'Hong Kong']
+    }
+  },
+  {
+    id: 'c-cybersecurity',
+    title: 'Cybersecurity Architect',
+    description: 'Protect critical infrastructure, thwart cyber attacks, and design secure systems for corporations and governments.',
+    industry: 'Technology',
+    isTech: true,
+    recommendedStreams: ['Science PCM'],
+    entranceExams: ['JEE Main', 'BITSAT'],
+    targetScores: ['JEE Main: 95+ Percentile'],
+    certificationsToGet: ['CEH (Certified Ethical Hacker)', 'CISSP', 'CompTIA Security+'],
+    coreSkills: ['Network Security', 'Penetration Testing', 'Cryptography', 'Incident Response'],
+    firstJobRoles: ['Security Analyst', 'Ethical Hacker', 'SOC Analyst'],
+    salaryRange: '₹8L - ₹25L+ / year (India)',
+    growthTrend: 'High',
+    dayInTheLife: 'Monitoring network traffic for anomalies, running penetration tests to find vulnerabilities, and patching security flaws.',
+    internationalPath: {
+      description: 'High global demand due to rising cyber threats. Government clearance is sometimes required for top roles.',
+      exams: ['GRE', 'IELTS'],
+      topDestinations: ['USA', 'Israel', 'UK', 'Australia']
+    }
+  },
+  {
+    id: 'c-ai-data-engineer',
+    title: 'AI & Data Engineer',
+    description: 'Design the massive data pipelines and infrastructure required to train powerful Artificial Intelligence models.',
+    industry: 'Technology',
+    isTech: true,
+    recommendedStreams: ['Science PCM'],
+    entranceExams: ['JEE Main & Advanced'],
+    targetScores: ['Top ranks in Engineering Exams'],
+    certificationsToGet: ['AWS Certified Machine Learning', 'Google Cloud Professional Data Engineer'],
+    coreSkills: ['Python/Scala', 'Distributed Computing (Spark/Hadoop)', 'Machine Learning APIs', 'Cloud Architecture'],
+    firstJobRoles: ['Data Engineer', 'Machine Learning Engineer', 'Backend Developer'],
+    salaryRange: '₹12L - ₹30L+ / year (India)',
+    growthTrend: 'High',
+    dayInTheLife: 'Building scalable data architectures, deploying ML models into production, and optimizing cloud compute costs.',
+    internationalPath: {
+      description: 'The backbone of the global AI boom. Top tech hubs heavily recruit data engineers.',
+      exams: ['GRE', 'TOEFL'],
+      topDestinations: ['USA', 'Canada', 'Germany', 'UK']
+    }
+  },
+  {
+    id: 'c-vlsi-semiconductor',
+    title: 'VLSI / Semiconductor Engineer',
+    description: 'Design and test the microchips and processors that power smartphones, EVs, and AI supercomputers.',
+    industry: 'Electronics / Technology',
+    isTech: true,
+    recommendedStreams: ['Science PCM'],
+    entranceExams: ['JEE Main & Advanced', 'GATE (for Masters)'],
+    targetScores: ['Top ranks for Electronics/Electrical Engineering'],
+    certificationsToGet: ['Verilog/VHDL Training', 'Physical Design Certifications'],
+    coreSkills: ['Digital Logic Design', 'Verilog/SystemVerilog', 'Computer Architecture', 'ASIC/FPGA Design'],
+    firstJobRoles: ['RTL Design Engineer', 'Verification Engineer', 'Physical Design Engineer'],
+    salaryRange: '₹10L - ₹28L+ / year (India)',
+    growthTrend: 'High',
+    dayInTheLife: 'Writing hardware description code, running intensive simulations, and collaborating with foundries for chip fabrication.',
+    internationalPath: {
+      description: 'Massive global push for localized semiconductor manufacturing. MS in VLSI abroad is highly valued.',
+      exams: ['GRE', 'TOEFL'],
+      topDestinations: ['USA (Silicon Valley/Texas)', 'Taiwan', 'Germany', 'South Korea']
+    }
+  },
+  {
+    id: 'c-ev-clean-energy',
+    title: 'EV & Clean Energy Engineer',
+    description: 'Develop next-generation electric vehicles, battery technologies, and renewable energy grids to combat climate change.',
+    industry: 'Engineering / Energy',
+    isTech: true,
+    recommendedStreams: ['Science PCM'],
+    entranceExams: ['JEE Main & Advanced'],
+    targetScores: ['Target Mechanical, Electrical, or Chemical Engineering'],
+    certificationsToGet: ['Battery Management Systems (BMS) Certification', 'Solar Energy Design'],
+    coreSkills: ['Power Electronics', 'Thermodynamics', 'Battery Chemistry', 'CAD/CAM Design'],
+    firstJobRoles: ['EV Design Engineer', 'Battery Testing Engineer', 'Solar Project Engineer'],
+    salaryRange: '₹6L - ₹18L+ / year (India)',
+    growthTrend: 'High',
+    dayInTheLife: 'Simulating battery thermal dynamics, designing efficient electric motors, and testing prototype vehicles.',
+    internationalPath: {
+      description: 'Europe and North America are leading the green transition. Excellent opportunities for researchers and engineers.',
+      exams: ['GRE', 'IELTS'],
+      topDestinations: ['Germany', 'Norway', 'USA', 'Netherlands']
+    }
   }
 ];
