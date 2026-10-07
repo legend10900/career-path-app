@@ -168,5 +168,68 @@ export const careers: Career[] = [
       exams: ['GMAT (730+)', 'GRE (330+)'],
       topDestinations: ['USA (Wall Street)', 'UK (London)', 'Hong Kong', 'Singapore']
     }
+  },
+  {
+    id: 'c-digital-marketer',
+    title: 'Digital Marketing Strategist',
+    description: 'Design and execute online marketing campaigns, analyze consumer data, and optimize brand presence across digital platforms.',
+    industry: 'Marketing',
+    isTech: false,
+    recommendedStreams: ['Commerce without Math', 'Humanities/Arts', 'Commerce with Math'],
+    entranceExams: ['BBA/BMS Entrance Exams (CUET, IPMAT)'],
+    targetScores: ['CUET: 95+ Percentile'],
+    certificationsToGet: ['Google Ads Certification', 'HubSpot Content Marketing', 'Meta Blueprint'],
+    coreSkills: ['SEO/SEM', 'Data Analytics', 'Copywriting', 'Social Media Strategy'],
+    firstJobRoles: ['Social Media Manager', 'SEO Specialist', 'Digital Marketing Executive'],
+    salaryRange: '₹4L - ₹15L+ / year (India)',
+    growthTrend: 'High',
+    dayInTheLife: 'Analyzing ad campaign performance, planning content calendars, and running A/B tests to optimize conversion rates.',
+    internationalPath: {
+      description: 'Global demand is massive for performance marketers. A Master’s in Digital Marketing abroad is popular.',
+      exams: ['IELTS (7.0+)', 'GMAT/GRE (optional)'],
+      topDestinations: ['UK', 'Canada', 'Australia']
+    }
+  },
+  {
+    id: 'c-commercial-pilot',
+    title: 'Commercial Pilot',
+    description: 'Fly commercial aircraft, ensure passenger safety, and travel the globe in one of the most exciting aviation careers.',
+    industry: 'Aviation',
+    isTech: false,
+    recommendedStreams: ['Science PCM'],
+    entranceExams: ['DGCA Medical & Written Exams', 'Cadet Pilot Programs (IndiGo, Air India)'],
+    targetScores: ['Class 1 Medical Fitness', 'Clear DGCA papers (Navigation, Meteorology, etc.)'],
+    certificationsToGet: ['Commercial Pilot License (CPL)', 'Instrument Rating (IR)', 'Multi-Engine Rating (MER)'],
+    coreSkills: ['Spatial Awareness', 'Quick Decision Making', 'Communication', 'Aircraft Systems Knowledge'],
+    firstJobRoles: ['First Officer', 'Junior Co-Pilot'],
+    salaryRange: '₹15L - ₹30L+ / year (India)',
+    growthTrend: 'High',
+    dayInTheLife: 'Performing pre-flight checks, coordinating with Air Traffic Control, navigating weather systems, and flying to various destinations.',
+    internationalPath: {
+      description: 'Many students get their CPL from flight schools abroad (USA, South Africa, New Zealand) and convert it in India.',
+      exams: ['FAA Exams (if in USA)', 'EASA (if in Europe)'],
+      topDestinations: ['USA', 'New Zealand', 'South Africa', 'Canada']
+    }
+  },
+  {
+    id: 'c-architect',
+    title: 'Architect',
+    description: 'Design buildings and structures that are functional, aesthetically pleasing, and structurally sound.',
+    industry: 'Architecture & Design',
+    isTech: false,
+    recommendedStreams: ['Science PCM'],
+    entranceExams: ['NATA', 'JEE Main Paper 2'],
+    targetScores: ['NATA: 130+/200', 'JEE Paper 2: 98+ Percentile'],
+    certificationsToGet: ['AutoCAD/Revit Certifications', 'LEED Green Associate'],
+    coreSkills: ['Spatial Design', '3D Modeling', 'Structural Understanding', 'Client Communication'],
+    firstJobRoles: ['Junior Architect', 'Design Assistant'],
+    salaryRange: '₹4L - ₹12L+ / year (India)',
+    growthTrend: 'Steady',
+    dayInTheLife: 'Drafting floor plans in CAD software, visiting construction sites, and meeting clients to discuss design changes.',
+    internationalPath: {
+      description: 'M.Arch abroad is highly respected. Licensure is required to practice independently in countries like USA/UK.',
+      exams: ['GRE', 'Portfolio Review'],
+      topDestinations: ['Italy', 'UK', 'USA', 'Singapore']
+    }
   }
 ];
